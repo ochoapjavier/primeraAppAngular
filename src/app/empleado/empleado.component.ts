@@ -13,6 +13,7 @@ export class EmpleadoComponent implements OnInit {
   //empresa="Sensu";
   habilitacionCuadro=true;
   usuarioRegistrado=false;
+  textoDeRegistro="No hay nadie registrado";
 
   getRegistroUsuario(){
     this.usuarioRegistrado=false
@@ -21,6 +22,16 @@ export class EmpleadoComponent implements OnInit {
 
   llamaEmpresa(value:String){
     
+  }
+
+  setUsuarioRegistrado(event: Event){
+    //alert("El usuario se acaba de registrar");
+    //this.textoDeRegistro="El usuario se acaba de registrar";
+    if ((<HTMLInputElement>event.target).value=="si") {
+      this.textoDeRegistro="El usuario se acaba de registrar";
+    } else{
+      this.textoDeRegistro="No hay nadie registrado";
+    }
   }
 
   constructor() { }
