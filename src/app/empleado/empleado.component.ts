@@ -11,6 +11,12 @@ export class EmpleadoComponent implements OnInit {
   apellido="Ochoa";
   edad=19;
   //empresa="Sensu";
+  habilitacionCuadro=true;
+  usuarioRegistrado=false;
+
+  getRegistroUsuario(){
+    this.usuarioRegistrado=false
+  }
 
 
   llamaEmpresa(value:String){
